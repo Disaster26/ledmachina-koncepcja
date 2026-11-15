@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>LEDmachina - tablice LED, telebimy i krzyże apteczne | Wrocław</title>
+<meta name="description" content="Polski producent tablic i ekranów LED: tablice tekstowe i graficzne, telebimy, krzyże apteczne, tablice sportowe i dla przemysłu. Realizacje w całej Polsce, raty i leasing.">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="img/hero-1024.webp" imagesrcset="img/hero-640.webp 640w, img/hero-1024.webp 1024w, img/hero-1600.webp 1600w" imagesizes="(max-width:600px) 100vw, 62vw" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="fonts/barlow-condensed-latin-700-normal.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/inter-latin-400-normal.woff2" crossorigin>
+<style>
+@font-face{font-family:"Barlow Condensed";font-weight:700;font-display:swap;src:url(fonts/barlow-condensed-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Barlow Condensed";font-weight:700;font-display:swap;src:url(fonts/barlow-condensed-latin-ext-700-normal.woff2) format("woff2");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Barlow Condensed";font-weight:600;font-display:swap;src:url(fonts/barlow-condensed-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122}
+@font-face{font-family:"Barlow Condensed";font-weight:600;font-display:swap;src:url(fonts/barlow-condensed-latin-ext-600-normal.woff2) format("woff2");unicode-range:U+0100-02AF,U+1E00-1E9F}
+@font-face{font-family:Inter;font-weight:400;font-display:swap;src:url(fonts/inter-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2199}
+@font-face{font-family:Inter;font-weight:400;font-display:swap;src:url(fonts/inter-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02AF,U+1E00-1E9F}
+@font-face{font-family:Inter;font-weight:600;font-display:swap;src:url(fonts/inter-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122}
+@font-face{font-family:Inter;font-weight:600;font-display:swap;src:url(fonts/inter-latin-ext-600-normal.woff2) format("woff2");unicode-range:U+0100-02AF,U+1E00-1E9F}
+:root{--red:#FF0000;--red-d:#D80000;--ink:#000;--txt:#1C1D20;--mut:#55585E;--grey:#F1F2F4;--line:#DCDEE2;--dark:#0B0B0C;--w:1240px;--hh:72px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--hh)}
+body{margin:0;background:#fff;color:var(--txt);font:17px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:"Barlow Condensed",Inter,sans-serif;font-weight:700;color:var(--ink);line-height:1.02;margin:0;letter-spacing:-.005em}
+h2{font-size:clamp(2.2rem,4.4vw,3.5rem)}
+h3{font-size:1.5rem;line-height:1.1}
+p{margin:0}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;gap:.6em;background:var(--red);color:#fff;text-decoration:none;font:600 1rem/1 Inter,sans-serif;padding:18px 26px;border:0;border-radius:3px;cursor:pointer;box-shadow:0 0 0 0 rgba(255,0,0,.0);transition:background .2s,box-shadow .2s}
+.btn:hover{background:var(--red-d);box-shadow:0 0 24px rgba(255,0,0,.45)}
+.btn .d{width:8px;height:8px;border-radius:50%;background:#fff;box-shadow:0 0 6px #fff}
+/* diody - separator */
+.diodes{height:14px;background:radial-gradient(circle closest-side,#D3D6DB 70%,transparent 76%) 0 50%/14px 14px repeat-x}
+.diodes i{display:block;height:14px;width:min(30%,252px);background:radial-gradient(circle closest-side,var(--red) 70%,transparent 76%) 0 50%/14px 14px repeat-x;filter:drop-shadow(0 0 3px rgba(255,0,0,.6))}
+/* header */
+.hd{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);height:var(--hh)}
+.hd .wrap{display:flex;align-items:center;height:100%;gap:28px}
+.logo{display:block;flex:none}
+.logo img{width:212px;height:auto}
+.nav{display:flex;gap:26px;margin-left:auto}
+.nav a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--txt);padding:6px 0;border-bottom:2px solid transparent}
+.nav a:hover,.nav a.on{border-color:var(--red)}
+.tel{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 1.35rem/1 "Barlow Condensed",sans-serif;color:var(--ink);white-space:nowrap}
+.tel svg{width:20px;height:20px;color:var(--red)}
+.burger{display:none;margin-left:auto;width:46px;height:46px;border:1px solid var(--line);background:#fff;border-radius:3px;cursor:pointer;padding:0}
+.burger span{display:block;width:20px;height:2px;background:#000;margin:4px auto}
+/* hero */
+.hero{position:relative;background:#000;color:#fff;min-height:calc(100svh - var(--hh));display:flex;overflow:hidden}
+.hero-media{position:absolute;top:0;right:0;bottom:0;width:62%}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:50% 45%;filter:saturate(1.25) brightness(1.25) contrast(1.05);-webkit-mask:radial-gradient(circle closest-side,#000 78%,transparent 100%) 0 0/5px 5px;mask:radial-gradient(circle closest-side,#000 78%,transparent 100%) 0 0/5px 5px}
+.hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#000 0%,rgba(0,0,0,.55) 22%,rgba(0,0,0,0) 48%),linear-gradient(0deg,rgba(0,0,0,.5),rgba(0,0,0,0) 30%)}
+.hero .wrap{position:relative;display:flex;flex-direction:column;justify-content:center;width:100%;padding-top:56px;padding-bottom:56px}
+.hero h1{color:#fff;font-size:clamp(3rem,6vw,5.6rem);max-width:7em;line-height:.95}
+.hero p.lead{font-size:clamp(1.05rem,1.4vw,1.25rem);max-width:27em;margin-top:22px;color:#E6E7EA}
+.hero .act{display:flex;flex-wrap:wrap;align-items:center;gap:18px 26px;margin-top:34px}
+.hero .act span{color:#C9CBD0;font-size:.98rem}
+.hero .act span a{color:#fff;text-decoration:none;font-weight:600;white-space:nowrap}
+.hero .where{position:absolute;right:24px;bottom:22px;font-size:.85rem;color:#B9BBC0}
+/* sekcje */
+section{padding:96px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:44px}
+.head p{max-width:34em;color:var(--mut)}
+.grey{background:var(--grey)}
+/* produkty */
+.prod{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;transition:border-color .2s,transform .2s}
+.card:hover{border-color:#000;transform:translateY(-2px)}
+.card .im{aspect-ratio:582/280;background:#E9E9E9;overflow:hidden}
+.card .im img{width:100%;height:100%;object-fit:cover}
+.card .tx{padding:20px 20px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card .tx p{font-size:.95rem;color:var(--mut);line-height:1.5}
+.card .tx b{margin-top:auto;padding-top:10px;font-size:.9rem;color:var(--red-d);font-weight:600}
+/* realizacje */
+.car{position:relative}
+.track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
+.track.drag{cursor:grabbing;scroll-snap-type:none}
+.track button{flex:0 0 calc((100% - 32px)/3);scroll-snap-align:start;border:0;padding:0;background:#000;border-radius:4px;overflow:hidden;cursor:zoom-in;position:relative;aspect-ratio:4/3}
+.track button img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.track button:hover img{transform:scale(1.03)}
+.track button span{position:absolute;left:0;right:0;bottom:0;padding:28px 16px 14px;background:linear-gradient(transparent,rgba(0,0,0,.75));color:#fff;font-weight:600;font-size:.95rem;text-align:left}
+.arr{display:flex;gap:10px}
+.arr button{width:50px;height:50px;border:1px solid #000;background:#fff;border-radius:3px;cursor:pointer;font-size:1.3rem;line-height:1}
+.arr button:hover{background:#000;color:#fff}
+/* ciemna */
+.dark{background:var(--dark) radial-gradient(circle closest-side,#1B1C1F 60%,transparent 70%) 0 0/12px 12px;color:#D9DBDF}
+.dark h2,.dark h3{color:#fff}
+.dark .cols{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.dark p{color:#C3C6CC;margin-top:18px}
+.dark ul{margin:22px 0 0;padding:0;list-style:none}
+.dark li{padding:12px 0 12px 26px;border-top:1px solid #26282C;position:relative}
+.dark li:before{content:"";position:absolute;left:4px;top:21px;width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 8px var(--red)}
+.pitch{background:#000;border:1px solid #2A2C30;border-radius:4px;padding:30px}
+.pitch table{width:100%;border-collapse:collapse;margin-top:18px;font-size:.95rem}
+.pitch th,.pitch td{text-align:left;padding:11px 8px;border-top:1px solid #23252A}
+.pitch th{color:#8E9198;font-weight:600}
+.pitch td{color:#fff}
+.pitch small{display:block;margin-top:14px;color:#8E9198;font-size:.82rem}
+.px{display:flex;gap:18px;margin-top:22px;align-items:end}
+.px div{flex:1;height:64px;border-radius:2px}
+.px .p6{background:radial-gradient(circle closest-side,var(--red) 72%,transparent 80%) 0 0/6px 6px}
+.px .p8{background:radial-gradient(circle closest-side,var(--red) 72%,transparent 80%) 0 0/8px 8px}
+.px .p10{background:radial-gradient(circle closest-side,var(--red) 72%,transparent 80%) 0 0/10px 10px}
+.px em{display:block;font-style:normal;color:#8E9198;font-size:.82rem;margin-top:6px}
+/* o firmie */
+.about{display:grid;grid-template-columns:1.15fr 1fr;gap:72px}
+.about p+p{margin-top:16px}
+.about .lead2{font-size:1.25rem;color:var(--ink);line-height:1.5}
+.buy{border-top:2px solid #000}
+.buy div{padding:22px 0;border-bottom:1px solid var(--line)}
+.buy h3{font-size:1.35rem}
+.buy p{color:var(--mut);margin-top:6px;font-size:.98rem}
+/* kontakt */
+.kont{display:grid;grid-template-columns:1fr 1.1fr;gap:56px}
+.kdane p{margin-top:14px}
+.kdane a{text-decoration:none;font-weight:600}
+.kdane .big{font:700 2.4rem/1 "Barlow Condensed",sans-serif;color:var(--ink);display:inline-block;margin-top:26px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:var(--grey);padding:30px;border-radius:4px}
+label{display:flex;flex-direction:column;gap:6px;font-size:.88rem;font-weight:600}
+label.full{grid-column:1/-1}
+input,select,textarea{font:inherit;font-size:1rem;padding:13px 14px;border:1px solid #C9CCD2;border-radius:3px;background:#fff;color:var(--txt);width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--red);outline-offset:0;border-color:var(--red)}
+textarea{min-height:120px;resize:vertical}
+form .btn{justify-self:start}
+form small{grid-column:1/-1;color:var(--mut);font-size:.82rem}
+.map{margin-top:56px;height:340px;background:#E4E6EA;border-radius:4px;overflow:hidden}
+.map iframe{width:100%;height:100%;border:0}
+/* stopka */
+.ft{background:var(--grey);padding:56px 0 28px;font-size:.93rem;color:var(--mut)}
+.ft .g{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+.ft h3{font-size:1.15rem;margin-bottom:10px}
+.ft a{text-decoration:none}
+.ft a:hover{color:var(--ink)}
+.ft ul{list-style:none;margin:0;padding:0;line-height:1.9}
+.ft .bot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:40px;padding-top:20px;border-top:1px solid var(--line)}
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;padding:20px}
+.lb[hidden]{display:none}
+.lb img{max-height:86vh;width:auto;max-width:100%;border-radius:3px}
+.lb button{position:absolute;background:none;border:0;color:#fff;font-size:2.2rem;cursor:pointer;width:56px;height:56px}
+.lb .x{top:10px;right:10px}.lb .pv{left:6px;top:50%;transform:translateY(-50%)}.lb .nx{right:6px;top:50%;transform:translateY(-50%)}
+.lb p{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#ddd;font-size:.95rem}
+/* cookies + mobilny pasek */
+.cookies{position:fixed;left:16px;bottom:16px;z-index:80;max-width:420px;background:#fff;border:1px solid var(--line);box-shadow:0 8px 30px rgba(0,0,0,.14);border-radius:4px;padding:14px 16px;display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center;font-size:.85rem}
+.cookies[hidden]{display:none}
+.cookies p{flex:1 1 100%;color:var(--mut)}
+.cookies button{font:600 .85rem Inter,sans-serif;padding:9px 14px;border-radius:3px;border:1px solid #000;background:#000;color:#fff;cursor:pointer}
+.cookies button.n{background:#fff;color:#000}
+.mob{display:none}
+.mnav{display:none}
+@media (max-width:1100px){
+ .nav{gap:18px}.nav a{font-size:.9rem}.logo img{width:180px}
+ .prod{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:900px){
+ :root{--hh:64px}
+ .nav,.hd .tel{display:none}
+ .burger{display:block}
+ .logo img{width:170px}
+ .mnav{position:fixed;top:var(--hh);left:0;right:0;bottom:0;z-index:60;background:#fff;padding:20px 24px;flex-direction:column}
+ .mnav.open{display:flex}
+ .mnav a{text-decoration:none;font:700 2rem/1 "Barlow Condensed",sans-serif;color:#000;padding:16px 0;border-bottom:1px solid var(--line)}
+ .mnav a.on{color:var(--red-d)}
+ .mnav .btn{margin-top:26px;justify-content:center;font-family:Inter,sans-serif;font-size:1rem;border:0;color:#fff;padding:18px}
+ section{padding:72px 0}
+ .head{flex-direction:column;align-items:start;gap:14px;margin-bottom:30px}
+ .dark .cols,.about,.kont{grid-template-columns:1fr;gap:40px}
+ .track button{flex-basis:calc((100% - 16px)/2)}
+ .ft .g{grid-template-columns:1fr 1fr}
+ .ft .g>div:first-child{grid-column:1/-1}
+ .mob{display:grid;grid-template-columns:1fr 1.4fr;position:fixed;left:0;right:0;bottom:0;z-index:70;background:#fff;border-top:1px solid var(--line);padding:10px 12px;gap:10px;transform:translateY(110%);transition:transform .25s}
+ .mob.on{transform:none}
+ .mob a{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:600;padding:14px;border-radius:3px;border:1px solid #000;color:#000}
+ .mob a.r{background:var(--red);border-color:var(--red);color:#fff}
+ .mob svg{width:18px;height:18px}
+ body{padding-bottom:0}
+}
+@media (max-width:600px){
+ body{font-size:16px}
+ .wrap{padding:0 18px}
+ .hero{min-height:calc(100svh - var(--hh))}
+ .hero-media{width:100%;bottom:auto;height:min(62%,560px)}
+ .hero-media img{object-position:50% 40%;-webkit-mask-size:4px 4px;mask-size:4px 4px}
+ .hero-media:after{background:linear-gradient(180deg,rgba(0,0,0,0) 45%,#000 100%)}
+ .hero .wrap{justify-content:flex-end;padding-top:40px;padding-bottom:30px}
+ .hero h1{font-size:clamp(2.7rem,12.5vw,3.4rem)}
+ .hero p.lead{margin-top:16px}
+ .hero .act{margin-top:26px;flex-direction:column;align-items:stretch;gap:14px}
+ .hero .act .btn{justify-content:center}
+ .hero .act span{text-align:center}
+ .hero .where{display:none}
+ .prod{grid-template-columns:1fr 1fr;gap:12px}
+ .card .tx{padding:14px 14px 16px;gap:6px}
+ .card h3{font-size:1.2rem}
+ .card .tx p{font-size:.85rem}
+ .track button{flex-basis:84%}
+ .arr{display:none}
+ form{grid-template-columns:1fr;padding:20px}
+ .pitch{padding:22px}
+ .kdane .big{font-size:2rem}
+ .map{height:280px}
+ .cookies{left:0;right:0;top:var(--hh);bottom:auto;max-width:none;border-radius:0;border-width:0 0 1px;padding:10px 14px;flex-wrap:nowrap;box-shadow:0 6px 16px rgba(0,0,0,.18)}
+ .cookies p{flex:1 1 auto;font-size:.8rem;line-height:1.35}
+ .cookies button{padding:8px 10px}
+}
+</style>
+</head>
+<body>
+<header class="hd">
+ <div class="wrap">
+  <a class="logo" href="#top" aria-label="LEDmachina - strona główna"><img src="img/logo.svg" alt="LEDmachina - telebimy i wyświetlacze reklamowe" width="318" height="71"></a>
+  <nav class="nav" aria-label="Menu główne">
+   <a href="#top" class="on">Start</a><a href="#oferta">Oferta</a><a href="#realizacje">Realizacje</a><a href="#piksel">Jak dobrać tablicę</a><a href="#firma">O firmie</a><a href="#kontakt">Kontakt</a>
+  </nav>
+  <a class="tel" href="tel:+48731501313"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>731 501 313</a>
+  <button class="burger" id="burger" aria-label="Otwórz menu" aria-expanded="false"><span></span><span></span><span></span></button>
+ </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Menu mobilne">
+ <a href="#top" class="on">Start</a><a href="#oferta">Oferta</a><a href="#realizacje">Realizacje</a><a href="#piksel">Jak dobrać tablicę</a><a href="#firma">O firmie</a><a href="#kontakt">Kontakt</a>
+ <a class="btn" href="tel:+48731501313">Zadzwoń: 731 501 313</a>
+</nav>
+
+<main id="top">
+<section class="hero" style="padding:0">
+ <div class="hero-media">
+  <img src="img/hero-1024.webp" srcset="img/hero-640.webp 640w, img/hero-1024.webp 1024w, img/hero-1600.webp 1600w" sizes="(max-width:600px) 100vw, 62vw" width="1600" height="1379" alt="Świecący szyld LED z napisami Kantor, Odzieżowy, Księgarnia - realizacja LEDmachina" fetchpriority="high">
+ </div>
+ <div class="wrap">
+  <h1>Reklama, którą widać z daleka</h1>
+  <p class="lead">Jesteśmy polskim producentem tablic i ekranów LED. Większość urządzeń projektujemy od podstaw sami, a treść zmienia się w nich w kilka minut. Realizujemy zamówienia w całym kraju.</p>
+  <div class="act">
+   <a class="btn" href="#kontakt"><i class="d"></i>Zapytaj o tablicę</a>
+   <span>albo zadzwoń: <a href="tel:+48731501313">731 501 313</a></span>
+  </div>
+ </div>
+ <p class="where">Realizacja: szyld LED w trzech kolorach</p>
+</section>
+<div class="diodes" aria-hidden="true"><i></i></div>
+
+<section id="oferta">
+ <div class="wrap">
+  <div class="head">
+   <h2>Co świeci u naszych klientów</h2>
+   <p>Od małej tablicy z ofertą dnia nad sklepem po telebim przy drodze. Doradzimy rozmiar, kolor diod i sposób montażu.</p>
+  </div>
+  <div class="prod">
+   <a class="card" href="#kontakt"><div class="im"><img src="img/p-tekstowe.webp" alt="Tablica tekstowa LED z napisem Zapraszamy" width="582" height="280" loading="lazy"></div><div class="tx"><h3>Tablice tekstowe</h3><p>Oferta i promocje zmieniane każdego dnia, czytelne dla przechodniów i kierowców.</p><b>Zapytaj o rozmiar</b></div></a>
+   <a class="card" href="#kontakt"><div class="im"><img src="img/p-graficzne.webp" alt="Tablica graficzno-tekstowa LED z animacją" width="582" height="280" loading="lazy"></div><div class="tx"><h3>Tablice graficzno-tekstowe</h3><p>Slogany, logo i proste animacje, które zatrzymują wzrok.</p><b>Zapytaj o rozmiar</b></div></a>
+   <a class="card" href="#kontakt"><div class="im"><img src="img/p-telebimy.webp" alt="Telebim LED na konstrukcji" width="582" height="280" loading="lazy"></div><div class="tx"><h3>Telebimy</h3><p>Ekrany do wnętrz i na zewnątrz, z automatyczną regulacją jasności.</p><b>Zapytaj o model</b></div></a>
+   <a class="card" href="#kontakt"><div class="im"><img src="img/p-krzyze.webp" alt="Krzyż apteczny LED" width="582" height="280" loading="lazy"></div><div class="tx"><h3>Krzyże apteczne</h3><p>Data, godzina, temperatura i komunikaty apteki. Odporne na mróz i UV.</p><b>Zapytaj o krzyż</b></div></a>
+   <a class="card" href="#kontakt"><div class="im"><img src="img/p-podswietlane.webp" alt="Tablice podświetlane LED z menu" width="582" height="280" loading="lazy"></div><div class="tx"><h3>Tablice podświetlane LED</h3><p>Eleganckie tablice na codzienne promocje i menu.</p><b>Zapytaj o tablicę</b></div></a>
+   <a class="card" href="#kontakt"><div class="im"><img src="img/p-statyczne.webp" alt="Statyczna tablica LED Sklep 24h" width="382" height="282" loading="lazy"></div><div class="tx"><h3>Tablice statyczne LED</h3><p>Stały napis podświetlony diodami, widoczny z daleka także nocą.</p><b>Zapytaj o projekt</b></div></a>
+   <a class="card" href="#kontakt"><div class="im"><img src="img/p-sportowe.webp" alt="Tablica wyników LED dla hali sportowej" width="582" height="280" loading="lazy"></div><div class="tx"><h3>Tablice i bandy sportowe</h3><p>Tablice wyników i bandy reklamowe dla hal i stadionów.</p><b>Zapytaj o obiekt</b></div></a>
+   <a class="card" href="#kontakt"><div class="im"><img src="img/p-przemysl.webp" alt="Tablica przemysłowa LED z zegarem i licznikiem" width="382" height="282" loading="lazy"></div><div class="tx"><h3>Tablice dla przemysłu</h3><p>Zegary, liczniki przerw i systemy kolejkowe dla zakładów.</p><b>Zapytaj o rozwiązanie</b></div></a>
+  </div>
+ </div>
+</section>
+
+<section id="realizacje" class="grey">
+ <div class="wrap">
+  <div class="head">
+   <h2>Nasze tablice w terenie</h2>
+   <div class="arr"><button type="button" data-dir="-1" aria-label="Poprzednie">&#8592;</button><button type="button" data-dir="1" aria-label="Następne">&#8594;</button></div>
+  </div>
+  <div class="car">
+   <div class="track" id="track">
+    <button type="button" data-full="img/kantor-1000.webp"><img src="img/kantor-500.webp" alt="Szyld LED Kantor, Odzieżowy, Księgarnia" width="500" height="375" loading="lazy"><span>Szyld LED w trzech kolorach</span></button>
+    <button type="button" data-full="img/apteka-1000.webp"><img src="img/apteka-500.webp" alt="Krzyż apteczny LED z napisem Apteka" width="500" height="375" loading="lazy"><span>Krzyż apteczny</span></button>
+    <button type="button" data-full="img/przeglady-1000.webp"><img src="img/przeglady-500.webp" alt="Tablica tekstowa LED Przeglądy na stacji kontroli pojazdów" width="500" height="375" loading="lazy"><span>Tablica tekstowa, stacja kontroli pojazdów</span></button>
+    <button type="button" data-full="img/bank-1000.webp"><img src="img/bank-500.webp" alt="Zielona tablica graficzna LED nad wejściem do banku" width="500" height="375" loading="lazy"><span>Tablica graficzna nad wejściem do banku</span></button>
+    <button type="button" data-full="img/bilard-1000.webp"><img src="img/bilard-500.webp" alt="Czerwona tablica graficzno-tekstowa LED Bilard club" width="500" height="375" loading="lazy"><span>Tablica graficzno-tekstowa, klub bilardowy</span></button>
+    <button type="button" data-full="img/kantor-ulica-1000.webp"><img src="img/kantor-ulica-500.webp" alt="Wyświetlacz temperatury LED przy kantorze" width="500" height="375" loading="lazy"><span>Wyświetlacz temperatury przy kantorze</span></button>
+    <button type="button" data-full="img/egipt-1000.webp"><img src="img/egipt-500.webp" alt="Tablica graficzna LED z napisem Egipt" width="500" height="375" loading="lazy"><span>Animacja graficzna dla biura podróży</span></button>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="piksel" class="dark">
+ <div class="wrap cols">
+  <div>
+   <h2>Treść zmieniasz sam, bez fachowca</h2>
+   <p>Do naszych tablic przygotowaliśmy własny, prosty program. Wpisujesz tekst, wybierasz czcionkę i efekt, a tablica od razu pokazuje nową ofertę. Przy krzyżach aptecznych i tablicach tekstowych wystarczy na chwilę podłączyć klawiaturę.</p>
+   <ul>
+    <li>Pomagamy dobrać produkt do miejsca i odległości, z której będą patrzeć klienci</li>
+    <li>Modele do wnętrz i na zewnątrz, z regulacją jasności do warunków</li>
+    <li>Wybór koloru diod i animacji graficznych</li>
+    <li>Montaż w różnych płaszczyznach, realizacje w całej Polsce</li>
+   </ul>
+  </div>
+  <div class="pitch">
+   <h3>Jak dobrać rozmiar piksela</h3>
+   <p>Rozmiar piksela to odstęp między środkami sąsiednich punktów świetlnych. Im mniejszy, tym ostrzejszy obraz z bliska. Gdy tablicę ogląda się z daleka, większy piksel daje ten sam efekt taniej.</p>
+   <div class="px" aria-hidden="true"><div><div class="p6" style="height:64px"></div><em>6 mm</em></div><div><div class="p8" style="height:64px"></div><em>8 mm</em></div><div><div class="p10" style="height:64px"></div><em>10 mm</em></div></div>
+   <table>
+    <tr><th>Model</th><th>WT P6</th><th>WT P8</th><th>WT P10</th></tr>
+    <tr><td>Rozstaw diod</td><td>6 mm</td><td>8 mm</td><td>10 mm</td></tr>
+    <tr><td>Pikseli na m²</td><td>27 777</td><td>15 625</td><td>10 000</td></tr>
+    <tr><td>Jasność</td><td>1500 cd/m²</td><td>1500 cd/m²</td><td>1500 cd/m²</td></tr>
+   </table>
+   <small>Dane z karty modeli WT. Modele zewnętrzne ZT dobieramy indywidualnie.</small>
+  </div>
+ </div>
+</section>
+
+<section id="firma">
+ <div class="wrap about">
+  <div>
+   <h2>Producent, nie pośrednik</h2>
+   <p class="lead2" style="margin-top:22px">Tablice LED projektujemy od podstaw sami, dlatego wiemy, jak działa każdy element i możemy dopasować urządzenie do konkretnego miejsca.</p>
+   <p>Skupiamy się na niezawodności i łatwej obsłudze. Każdy klient ma inne potrzeby, więc najpierw pytamy, gdzie stanie tablica, kto będzie ją oglądał i jak często zmienia się oferta, a dopiero potem proponujemy rozwiązanie.</p>
+   <p>Dzięki sieci dystrybucji realizujemy projekty na terenie całego kraju. Szukamy też partnerów sprzedaży, którym oferujemy szkolenie z oferty i materiały reklamowe.</p>
+  </div>
+  <div class="buy">
+   <div><h3>Gotówka lub przelew</h3><p>Standardowa płatność za tablicę po ustaleniu projektu.</p></div>
+   <div><h3>Raty</h3><p>Zajmujemy się formalnościami, szybka decyzja. Nie trzeba mieć firmy.</p></div>
+   <div><h3>Leasing</h3><p>Pomagamy przy formalnościach. Firma zachowuje płynność, a ratę można rozliczyć w kosztach.</p></div>
+   <div><h3>Współpraca handlowa</h3><p>System prowizyjny dla firm i osób, które chcą sprzedawać nasze tablice.</p></div>
+  </div>
+ </div>
+</section>
+<div class="diodes" aria-hidden="true"><i></i></div>
+
+<section id="kontakt">
+ <div class="wrap">
+  <div class="kont">
+   <div class="kdane">
+    <h2>Opisz miejsce, dobierzemy tablicę</h2>
+    <p style="color:var(--mut)">Napisz, gdzie ma zawisnąć tablica, jakiej mniej więcej wielkości i co ma wyświetlać. Odpowiemy z propozycją i wyceną.</p>
+    <a class="big" href="tel:+48731501313">731 501 313</a>
+    <p><a href="mailto:handlowy@ledmachina.pl">handlowy@ledmachina.pl</a><br><a href="mailto:biuro@ledmachina.pl">biuro@ledmachina.pl</a></p>
+    <p>LEDmachina<br>ul. Złotoryjska 7/3, 53-614 Wrocław<br>fax 71 72 372 71</p>
+   </div>
+   <form id="form" novalidate>
+    <label>Imię i nazwisko<input name="n" autocomplete="name"></label>
+    <label>Telefon<input name="t" type="tel" autocomplete="tel"></label>
+    <label class="full">E-mail<input name="e" type="email" autocomplete="email"></label>
+    <label class="full">Rodzaj tablicy<select name="r"><option>Tablica tekstowa</option><option>Tablica graficzno-tekstowa</option><option>Telebim</option><option>Krzyż apteczny</option><option>Tablica podświetlana / statyczna</option><option>Tablica sportowa</option><option>Tablica dla przemysłu</option><option>Jeszcze nie wiem</option></select></label>
+    <label class="full">Gdzie stanie tablica i co ma pokazywać<textarea name="m"></textarea></label>
+    <button class="btn" type="submit"><i class="d"></i>Wyślij zapytanie</button>
+    <small id="fmsg">Podgląd projektu - formularz nie wysyła jeszcze wiadomości.</small>
+   </form>
+  </div>
+  <div class="map" id="map" data-src="https://www.google.com/maps?q=Z%C5%82otoryjska+7,+53-614+Wroc%C5%82aw&amp;output=embed"></div>
+ </div>
+</section>
+</main>
+
+<footer class="ft">
+ <div class="wrap">
+  <div class="g">
+   <div><img src="img/logo.svg" alt="LEDmachina" width="200" height="45" style="width:200px;height:auto" loading="lazy"><p style="margin-top:14px;max-width:26em">Polski producent tablic reklamowych i ekranów LED. Realizacje w całym kraju.</p></div>
+   <div><h3>Oferta</h3><ul><li><a href="#oferta">Tablice tekstowe</a></li><li><a href="#oferta">Telebimy</a></li><li><a href="#oferta">Krzyże apteczne</a></li><li><a href="#oferta">Tablice sportowe</a></li></ul></div>
+   <div><h3>Kontakt</h3><ul><li><a href="tel:+48731501313">731 501 313</a></li><li><a href="mailto:biuro@ledmachina.pl">biuro@ledmachina.pl</a></li><li>ul. Złotoryjska 7/3</li><li>53-614 Wrocław</li></ul></div>
+  </div>
+  <div class="bot">
+   <span>&copy; <span id="y">2026</span> LEDmachina &middot; <a href="#">Polityka prywatności</a></span>
+   <a class="wylinka-badge" href="https://wylinka.pl/?utm_source=ledmachina.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
+  </div>
+ </div>
+</footer>
+
+<div class="mob" id="mob">
+ <a href="tel:+48731501313"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Zadzwoń</a>
+ <a class="r" href="#kontakt">Zapytaj o tablicę</a>
+</div>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+ <button class="x" type="button" aria-label="Zamknij">&times;</button><button class="pv" type="button" aria-label="Poprzednie">&#8249;</button><button class="nx" type="button" aria-label="Następne">&#8250;</button>
+ <img alt=""><p></p>
+</div>
+
+<div class="cookies" id="cookies" hidden>
+ <p>Mapa Google może zapisywać pliki cookies. <a href="#">Polityka prywatności</a></p>
+ <button type="button" class="n" data-c="0">Odrzuć</button><button type="button" data-c="1">Akceptuję</button>
+</div>
+<script>try{if(!localStorage.getItem('lm-c'))document.getElementById('cookies').hidden=false}catch(e){document.getElementById('cookies').hidden=false}</script>
+<script src="app.js" defer></script>
+</body>
+</html>
